@@ -1,9 +1,9 @@
 # Проект YaMDb
 
-## Описание:
+## Описание
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Titles).
 
-## Шаблон наполнения env-файла:
+## Шаблон наполнения env-файла
 DB_ENGINE=django.db.backends.postgresql
 # указываем, что работаем с postgresql
 DB_NAME=postgres
@@ -17,12 +17,11 @@ DB_HOST=db
 DB_PORT=5432
 # порт для подключения к БД
 
-## Для запуска приложения в контейнерах:
+## Для запуска приложения в контейнерах
 - Запустить проект:
 ```
 docker-compose up -d
 ```
-
 - Выполнить миграции:
 ```
 docker-compose exec web python manage.py migrate
@@ -31,7 +30,8 @@ docker-compose exec web python manage.py migrate
 ```
 docker-compose exec web python manage.py createsuperuser
 ```
-## Основные endpoints:
+
+## Основные endpoints
 ```
 "auth": "http://127.0.0.1:8000/api/v1/auth/"
 ```
@@ -47,3 +47,16 @@ docker-compose exec web python manage.py createsuperuser
 ```
 "titles": "http://127.0.0.1:8000/api/v1/titles/"
 ```
+
+## Автор
+Andrew Stepanov
+
+## Используемые технологии
+- Django
+- Django REST
+- Simple JWT
+- Docker
+- Docker-compose
+- Nginx
+- Gunicorn
+- PostgeSQL
