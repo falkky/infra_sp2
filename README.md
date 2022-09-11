@@ -4,18 +4,30 @@
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Titles).
 
 ## Шаблон наполнения env-файла
+- Указываем, что работаем с postgresql:
+```
 DB_ENGINE=django.db.backends.postgresql
-# указываем, что работаем с postgresql
+```
+- Имя базы данных:
+```
 DB_NAME=postgres
-# имя базы данных
+```
+- Логин для подключения к базе данных:
+```
 POSTGRES_USER=postgres
-# логин для подключения к базе данных
+```
+- Пароль для подключения к БД (установите свой):
+```
 POSTGRES_PASSWORD=postgres
-# пароль для подключения к БД (установите свой)
+```
+- Название сервиса (контейнера):
+```
 DB_HOST=db
-# название сервиса (контейнера)
+```
+- Порт для подключения к БД:
+```
 DB_PORT=5432
-# порт для подключения к БД
+```
 
 ## Для запуска приложения в контейнерах
 - Запустить проект:
@@ -29,6 +41,10 @@ docker-compose exec web python manage.py migrate
 - Создать суперпользователя:
 ```
 docker-compose exec web python manage.py createsuperuser
+```
+- Собираем статику проекта:
+```
+docker-compose exec web python manage.py collectstatic --no-input
 ```
 
 ## Основные endpoints
