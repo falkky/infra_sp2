@@ -48,6 +48,10 @@ docker-compose exec web python manage.py collectstatic --no-input
 ```
 
 ## Основные endpoints
+Документация к API доступна в формате Redoc:
+```
+http://127.0.0.1:80/redoc/
+```
 ```
 "auth": "http://127.0.0.1:8000/api/v1/auth/"
 ```
